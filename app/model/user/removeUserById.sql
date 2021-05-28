@@ -1,6 +1,0 @@
-DELETE
-FROM
-    USERS
-WHERE
-    ID = ?
-;
