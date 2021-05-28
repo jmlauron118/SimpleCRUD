@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar class="header" title="{{ title }}" icon="" />
+    <GridLayout rows="*, auto" class="grid-user">
+        <StackLayout row="0">
+            <StackLayout class="form-control">
+                <Label text="First Name:" class="lb-normal"></Label>
+                <TextField class="input" text="{{ firstname }}"></TextField>
+            </StackLayout>
+            <StackLayout class="form-control">
+                <Label text="Last Name:" class="lb-normal"></Label>
+                <TextField class="input" text="{{ lastname }}"></TextField>
+            </StackLayout>
+            <StackLayout class="form-control">
+                <Label text="Address:" class="lb-normal"></Label> 
+                <TextField class="input" text="{{ address }}"></TextField>
+            </StackLayout> 
+        </StackLayout> 
+        <StackLayout row="1" horizontalAlignment="right" orientation="horizontal"> 
+            <Button text="&#xf51a;" class="fa btn-dark round" tap="ClearFields"></Button>
+            <Button text="{{ action == 'add' ? '&#xf067;': '&#xf304;' }}" 
+                class="{{ (action=='add' ? 'btn-primary':'btn-warning') + ' fa round' }} " tap="AddUser"></Button>
+        </StackLayout> 
+    </GridLayout> 
+</Page>
